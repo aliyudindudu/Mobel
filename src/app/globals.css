@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 31, 41, 55;
+  --background-rgb: 250, 250, 250;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight text-charcoal;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-charcoal text-white px-6 py-3 font-medium transition-transform active:scale-95 flex items-center gap-2;
+  }
+  .bento-card {
+    @apply relative overflow-hidden bg-muted cursor-pointer border border-transparent hover:border-charcoal/5 transition-all;
+  }
+}
+
+/* GSAP Smooth Reveal Classes */
+.reveal-content {
+  opacity: 0;
+  transform: translateY(20px);
+}
